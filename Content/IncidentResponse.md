@@ -10,7 +10,7 @@
 7. Post Incident/Lessons Learned
 
 ### Investigation Questions
-Investigating an event/incident untimely comes down to asking and answering questions. One of more questions will need to be answered before being able to close or action an alert. Below is a non-comprehensive list of example questions that may be asked during an investigation. As your experience grows as an analyst, so will your skill in identifying which questions are relevant and which questions should be prioritized.
+Investigating an event/incident ultimately comes down to asking and answering questions. One of more questions will need to be answered before being able to close or action an alert. Below is a non-comprehensive list of example questions that may be asked during an investigation. As your experience grows as an analyst, so will your skill in identifying which questions are relevant and which questions should be prioritized.
 
 - Were there any unusual login activity?
 - Were there any successful logins?
