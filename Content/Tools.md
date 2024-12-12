@@ -41,7 +41,7 @@
 | [HxD](https://mh-nexus.de/en/hxd/)                                                                                             | Hex Editor                                                                                         |
 
 ### Automated Installation with Chocolatey
-Below is a command that will use the package manager, Chocolatey, to install as many of the above tools as possible. Before using this command, review the licensing for each tool to determine which can be freely used and which need commercial licenses. All of the above are legitimate tools but security tools may alert due to the presence of some of the tools, use caution.
+Below is a command that will use the package manager, [Chocolatey](https://chocolatey.org/), to install as many of the above tools as possible. Before using this command, review the licensing for each tool to determine which can be freely used and which need commercial licenses. All of the above are legitimate tools but security tools may alert due to the presence of some of the tools, use caution.
 
 Note: The full Sysinternals and Eric Zimmerman suites are installed, not just the ones listed above.
 
