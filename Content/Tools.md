@@ -43,9 +43,11 @@
 ### Automated Installation with Chocolatey
 Below is a command that will use the package manager, [Chocolatey](https://chocolatey.org/), to install as many of the above tools as possible. Before using this command, review the licensing for each tool to determine which can be freely used and which need commercial licenses. All of the above are legitimate tools but security tools may alert due to the presence of some of the tools, use caution.
 
+Packages will be installed to C:\ProgramData\chocolatey\lib\ by default.
+
 Note: The full Sysinternals and Eric Zimmerman suites are installed, not just the ones listed above.
 
-`choco install cyberchef dcode ericzimmermantools exiftool sqlitebrowser arsenalimagemounter capa yara plaso sysinternals wireshark fakenet browsinghistoryview cports everything 7zip floss network-miner notepadplusplus hxdcyberchef`
+`choco install cyberchef dcode ericzimmermantools exiftool sqlitebrowser arsenalimagemounter capa yara plaso sysinternals wireshark fakenet browsinghistoryview cports everything 7zip floss network-miner notepadplusplus hxd`
 
 *** 
 [Return to home page](../README.md)
