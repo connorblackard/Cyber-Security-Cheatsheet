@@ -14,6 +14,7 @@
 | Count by value                   | \| summarize count() by EventID            | \| stats count by EventID      |
 | Sort (Ascending)                 | \| sort by count asc                       | \| sort by -count              |
 | Sort (Descending)                | \| sort by count desc                      | \| sort by count               |
+| Filter field for multiple values | \| where EventCode in (4624, 4625)         | EventCode IN (4624, 4625)      |
 
 *** 
 [Return to home page](../README.md)

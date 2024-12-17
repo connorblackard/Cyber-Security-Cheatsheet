@@ -13,6 +13,7 @@
 | [https://www.virustotal.com/gui/](https://www.virustotal.com/gui/)                  | View ASN, check certificate information, Related files and domains |
 | [https://talosintelligence.com](https://talosintelligence.com/)                     | IP reputation                                                      |
 | [https://sicehice.com](https://sicehice.com/)                                       | Threat intelligence lists, VPN service identification              |
+
 ### Domain
 
 | Site                                                                                    | Notes                                                              |
@@ -21,7 +22,10 @@
 | [https://www.virustotal.com/gui/](https://www.virustotal.com/gui/)                      | Web Category, AV Hits                                              |
 | [https://urlfiltering.paloaltonetworks.com](https://urlfiltering.paloaltonetworks.com/) | Web Category                                                       |
 | [https://toolbox.googleapps.com/apps/dig/](https://toolbox.googleapps.com/apps/dig/)    | Web based DNS record tool                                          |
-| https://lots-project.com/                                                               | Identifies trusted sites that are commonly abused by threat actors |
+| [https://lots-project.com/](https://lots-project.com/)                                  | Identifies trusted sites that are commonly abused by threat actors |
+| [https://crt.sh/](https://crt.sh/)                                                      | Certificate transparency logs                                      |
+| [https://web-check.xyz/](https://web-check.xyz/)                                        | General website information                                        |
+
 ### URL
 
 | Site                                                                       | Notes                                                  |
@@ -41,6 +45,13 @@
 | [https://www.joesandbox.com/](https://www.joesandbox.com/)          | Non interactive public sandbox      |
 | [https://sandbox.pikker.ee](https://sandbox.pikker.ee/)             | Non interactive public sandbox      |
 | [https://app.any.run/submissions](https://app.any.run/submissions)  | View reports of public samples only |
+
+### Endpoint
+
+| Site                                                                                                                 | Notes                                                                         |
+| -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| [https://github.com/AndrewRathbun/VanillaWindowsReference](https://github.com/AndrewRathbun/VanillaWindowsReference) | Snapshot of directories, files, and hashes of a baseline Windows installation |
+| [https://explainshell.com/](https://explainshell.com/)                                                               | Break down and explain complicated Linux/Unix command lines                   |
 
 *** 
 [Return to home page](../README.md)
