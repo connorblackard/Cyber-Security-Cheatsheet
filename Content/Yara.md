@@ -2,6 +2,7 @@
 ### Usage
 
 - Scanning a file: `yara64 yara-rules-extended.yar c:\Windows\System32\cmd.exe`
+- Scanning a folder: `yara64 yara-rules-extended.yar c:\Windows\System32`
 - Compiling a rules file: `yarac64 yara-rules-extended.yar compiled_yara.yac`
 - Scanning a file with compiled rules: `yara64 -C compiled_yara.yac c:\windows\System32\cmd.exe`
     - Must run on the same version of yara that compiled the file
