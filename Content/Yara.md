@@ -13,7 +13,14 @@
 - [https://github.com/Neo23x0/signature-base](https://github.com/Neo23x0/signature-base)
 - [https://github.com/elastic/protections-artifacts/tree/main/yara](https://github.com/elastic/protections-artifacts/tree/main/yara)
 
-Additional Resources:
+### Tools
+
+- [https://virustotal.github.io/yara/](https://virustotal.github.io/yara/)
+- [https://github.com/VirusTotal/yara-x](https://github.com/VirusTotal/yara-x)
+- [https://github.com/Neo23x0/Loki](https://github.com/Neo23x0/Loki)
+- [https://www.nextron-systems.com/thor-lite/](https://www.nextron-systems.com/thor-lite/)
+
+### Additional Resources:
 - [https://github.com/InQuest/awesome-yara](https://github.com/InQuest/awesome-yara)
 
 *** 

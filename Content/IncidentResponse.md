@@ -36,7 +36,7 @@ Investigating an event/incident ultimately comes down to asking and answering qu
 - Were there external data transfers? What size?
 - What service does this port belong to?
 
-Additional Resources:
+### Additional Resources:
 - https://chrissanders.org/2016/05/how-analysts-approach-investigations/
 
 *** 
