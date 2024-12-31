@@ -19,6 +19,7 @@
 - Stop Remote PowerShell Session: `Exit-PSSession`
 - Run Remote PowerShell Commands: `Invoke-Command -ComputerName DC01 -ScriptBlock { Get-ComputerInfo}`
 - Run Remote PowerShell Scripts: `Invoke-Command -ComputerName DC01 -filepath C:\temp\triage.ps1`
+- Sign PowerShell Script: `$cert = gci -path Cert:\CurrentUser\my -codesigningcert; Set-AuthenticodeSignature -FilePath C:\temp\triage.ps1 -Certificate $cert -HashAlgorithm SHA256 -TimestampServer http://timestamp.digicert.com`
 
 More DFIR PowerShell commands can be found [here](https://github.com/Bert-JanP/Incident-Response-Powershell/blob/main/DFIR-Commands.md).
 
