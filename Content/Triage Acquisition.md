@@ -63,7 +63,7 @@ Write-Host "Acquisition completed successfully. Zip file saved to: $zipFilePath"
 ```
 
 #### PowerShell Wrapper
-Some EDR platforms will not allow you to run forensic tools directly but instead require you to instead use a PowerShell script. Below is an example of a script that can be ran by remote PowerShell or EDR platforms.
+Some EDR platforms will not allow you to run forensic tools directly but instead require you to instead use a PowerShell script. Below is an example of a script that can be ran by remote PowerShell or EDR platforms. This script will need to be adapted and/or signed to work in your enviornment.
 
 ```
 $url = "http://10.2.99.31:8000/velociraptor.zip"
