@@ -62,5 +62,23 @@ Remove-Item -Path $TempWorkingDir -Recurse -Force
 Write-Host "Acquisition completed successfully. Zip file saved to: $zipFilePath"
 ```
 
+#### PowerShell Wrapper
+Some EDR platforms will not allow you to run forensic tools directly but instead require you to instead use a PowerShell script. Below is an example of a script that can be ran by remote PowerShell or EDR platforms.
+
+```
+$url = "http://10.2.99.31:8000/velociraptor.zip"
+$path = "C:\temp\forensics"
+$executable = "velociraptor-v0.73.1-windows-amd64.exe"
+$config_file = "Collector_velociraptor-collector"
+$arguments = "-- --embedded_config $config_file"
+
+Invoke-WebRequest $url -OutFile .\velociraptor.zip
+Expand-Archive .\velociraptor.zip -DestinationPath $path
+Set-Location $path
+
+Start-Process -FilePath $executable -ArgumentList $arguments -wait
+Remove-Item -path $executable, $config_file, ($path + "\velociraptor.zip")
+```
+
 *** 
 [Return to home page](../README.md)
