@@ -18,6 +18,7 @@
 - Start Remote PowerShell Session: `Enter-PSSession -ComputerName DC01`
 - Stop Remote PowerShell Session: `Exit-PSSession`
 - Run Remote PowerShell Commands: `Invoke-Command -ComputerName DC01 -ScriptBlock { Get-ComputerInfo}`
+- Run Remote PowerShell Scripts: `Invoke-Command -ComputerName DC01 -filepath C:\temp\triage.ps1`
 
 More DFIR PowerShell commands can be found [here](https://github.com/Bert-JanP/Incident-Response-Powershell/blob/main/DFIR-Commands.md).
 
