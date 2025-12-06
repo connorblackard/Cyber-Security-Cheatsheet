@@ -2,7 +2,9 @@
 
 ### Unified Logging System
 
-macOS uses the Unified Logging System (introduced in macOS 10.12 Sierra) which centralizes system and application logs. The `log` command is the primary tool for querying these logs.
+macOS uses the Unified Logging System (introduced in macOS 10.12 Sierra) which centralizes system and application logs. The `log` command is the primary tool for querying and collecting these logs.
+
+**Note:** For incident response, collect logs from the target system using the commands below, then perform detailed analysis on an analyst workstation.
 
 ### Log Command Basics
 
@@ -194,21 +196,22 @@ Common BSM audit event types to investigate:
 - `AUE_unlink` - File deletion
 - `AUE_rename` - File rename
 
-### Log Analysis Tools
+### Log Collection and Analysis Tools
 
-#### Native Tools
-- `log` - Unified logging query tool
+#### Native Collection Tools (run on target system)
+- `log` - Unified logging query and collection tool
 - `Console.app` - GUI log viewer
-- `syslog` - Legacy logging command (deprecated)
 - `praudit` - BSM audit log viewer
 - `fs_usage` - Real-time file system activity monitor
 
-#### Third-Party Tools
-- [UnifiedLogReader](https://github.com/ydkhatri/UnifiedLogReader) - Parse unified logs offline
+#### Collection Tools
 - [OSXCollector](https://github.com/Yelp/osxcollector) - Forensic evidence collection
 - [Crescendo](https://github.com/SuprHackerSteve/Crescendo) - Real-time event viewer
-- [Santa](https://github.com/google/santa) - Binary authorization system with logging
+
+#### Analysis Tools (use on analyst workstation with collected logs)
+- [UnifiedLogReader](https://github.com/ydkhatri/UnifiedLogReader) - Parse unified logs offline
 - [ELK Stack](https://www.elastic.co/elastic-stack/) - Log aggregation and analysis
+- `log` command on analyst Mac - Can read .logarchive files collected from target
 
 ### Forensic Log Analysis Examples
 

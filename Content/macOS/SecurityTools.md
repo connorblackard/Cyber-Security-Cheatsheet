@@ -1,21 +1,18 @@
 ## macOS Security Tools
 
-### Forensics and Analysis Tools
+### Forensics and Collection Tools
 
 | Name                                                                                           | Purpose                                                                           |
 | ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| [mac_apt](https://github.com/ydkhatri/mac_apt)                                                 | macOS Artifact Parsing Tool - comprehensive artifact analysis                     |
+| [mac_apt](https://github.com/ydkhatri/mac_apt)                                                 | macOS Artifact Parsing Tool - comprehensive artifact parsing                      |
 | [AutoMacTC](https://github.com/CrowdStrike/automactc)                                          | Automated macOS forensic triage collection framework                              |
-| [APOLLO](https://github.com/mac4n6/APOLLO)                                                     | Apple Pattern of Life Lazy Output'er - user activity analysis                     |
+| [APOLLO](https://github.com/mac4n6/APOLLO)                                                     | Apple Pattern of Life Lazy Output'er - artifact parsing                           |
 | [ORION](https://github.com/Johnng007/ORION)                                                    | macOS artifact collection tool                                                     |
-| [OSXCollector](https://github.com/Yelp/osxcollector)                                           | Forensic evidence collection and analysis for macOS                                |
+| [OSXCollector](https://github.com/Yelp/osxcollector)                                           | Forensic evidence collection for macOS                                             |
 | [KnockKnock](https://objective-see.org/products/knockknock.html)                               | Persistence mechanism enumeration tool                                             |
 | [Crescendo](https://github.com/SuprHackerSteve/Crescendo)                                      | Real-time event viewer and process monitoring                                      |
 | [UnifiedLogReader](https://github.com/ydkhatri/UnifiedLogReader)                               | Parse macOS unified logs offline                                                   |
 | [FSEventsParser](https://github.com/dlcowen/FSEventsParser)                                    | Parse FSEvents logs for file system timeline                                       |
-| [Blacklight](https://www.blackbagtech.com/products/blacklight/)                                | Commercial macOS forensic analysis suite                                           |
-| [Magnet AXIOM](https://www.magnetforensics.com/products/magnet-axiom/)                         | Commercial digital forensics platform with macOS support                           |
-| [Cellebrite](https://cellebrite.com/)                                                          | Commercial mobile and computer forensics (macOS support)                           |
 
 ### Security Monitoring and Detection
 
@@ -44,9 +41,7 @@
 | [YARA](https://virustotal.github.io/yara/)                                                     | Pattern matching for malware research                                              |
 | [Floss](https://github.com/mandiant/flare-floss)                                               | Extract obfuscated strings from malware                                            |
 | [strings](https://developer.apple.com/library/archive/documentation/Darwin/Reference/ManPages/man1/strings.1.html) | Built-in string extraction (already on macOS)                    |
-| [Hopper Disassembler](https://www.hopperapp.com/)                                              | Commercial disassembler and decompiler                                             |
 | [Ghidra](https://ghidra-sre.org/)                                                              | Free reverse engineering tool by NSA                                               |
-| [IDA Pro](https://hex-rays.com/ida-pro/)                                                       | Commercial disassembler and debugger                                               |
 | [radare2](https://rada.re/)                                                                    | Free reverse engineering framework                                                 |
 | [OTX](https://newosxbook.com/tools/otx.html)                                                   | Object Tool eXtended - Mach-O disassembler                                         |
 | [MachOView](https://sourceforge.net/projects/machoview/)                                       | Visual Mach-O file browser                                                         |
@@ -60,7 +55,6 @@
 | [tcpdump](https://www.tcpdump.org/)                                                            | Command-line packet analyzer (built-in)                                            |
 | [NetworkMiner](https://www.netresec.com/?page=NetworkMiner)                                    | Network forensic analysis tool                                                     |
 | [LuLu](https://objective-see.org/products/lulu.html)                                           | Open-source firewall with network monitoring                                       |
-| [Little Snitch](https://www.obdev.at/products/littlesnitch/)                                   | Commercial network monitor and firewall                                            |
 | [nmap](https://nmap.org/)                                                                      | Network discovery and security scanning                                            |
 
 ### Utility and System Tools
@@ -68,13 +62,11 @@
 | Name                                                                                           | Purpose                                                                           |
 | ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
 | [SQLite Browser](https://sqlitebrowser.org/)                                                  | Browse and query SQLite databases                                                  |
-| [plist Editor](https://www.fatcatsoftware.com/plisteditpro/)                                  | Commercial plist file editor                                                       |
 | [ExifTool](https://exiftool.org/)                                                             | Read and write file metadata                                                       |
 | [HexFiend](https://hexfiend.com/)                                                             | Fast hex editor for macOS                                                          |
 | [iHex](https://github.com/suzuki-0000/HexEditor)                                               | Hex editor                                                                         |
 | [The Sleuth Kit](https://www.sleuthkit.org/)                                                  | File system forensic analysis tools                                                |
 | [Autopsy](https://www.autopsy.com/)                                                           | GUI for The Sleuth Kit (limited macOS support)                                     |
-| [Kroll Artifact Parser](https://www.kroll.com/en/services/cyber-risk/incident-response-litigation-support/kroll-artifact-parser-extractor-kape) | Artifact collection (KAPE for macOS via Velociraptor) |
 | [plutil](https://developer.apple.com/library/archive/documentation/Darwin/Reference/ManPages/man1/plutil.1.html) | Built-in plist converter and validator                            |
 | [defaults](https://ss64.com/osx/defaults.html)                                                | Built-in plist reader/writer                                                       |
 
@@ -85,16 +77,6 @@
 | [Volatility](https://github.com/volatilityfoundation/volatility)                              | Memory forensics framework (limited macOS support)                                 |
 | [Rekall](http://www.rekall-forensic.com/)                                                     | Memory forensic framework                                                          |
 | [osxpmem](https://github.com/google/rekall/tree/master/tools/osx/MacPmem)                     | macOS physical memory acquisition                                                  |
-
-### Cloud and Enterprise Tools
-
-| Name                                                                                           | Purpose                                                                           |
-| ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| [Jamf Protect](https://www.jamf.com/products/jamf-protect/)                                   | Enterprise endpoint security for macOS                                             |
-| [CrowdStrike Falcon](https://www.crowdstrike.com/)                                            | Enterprise EDR with macOS support                                                  |
-| [SentinelOne](https://www.sentinelone.com/)                                                   | Enterprise EDR with macOS support                                                  |
-| [Carbon Black](https://www.vmware.com/products/carbon-black-cloud.html)                       | Enterprise endpoint security                                                       |
-| [Microsoft Defender for Endpoint](https://www.microsoft.com/en-us/security/business/endpoint-security/microsoft-defender-endpoint) | Enterprise endpoint protection                                  |
 
 ### Incident Response
 
@@ -174,18 +156,6 @@ brew install binwalk
 # Install multiple tools at once
 brew install exiftool yara nmap osquery sleuthkit radare2 binwalk
 ```
-
-### Commercial Tools
-
-For enterprise and professional use:
-
-- **Magnet AXIOM** - Full-featured forensic platform
-- **Blacklight** - macOS-specific forensic suite
-- **Cellebrite** - Mobile and computer forensics
-- **EnCase Forensic** - Industry-standard forensic platform
-- **X-Ways Forensics** - Advanced forensic tool
-- **Jamf Protect** - Enterprise security for macOS fleets
-- **Little Snitch** - Advanced network monitoring
 
 ### Recommended Tool Stack
 

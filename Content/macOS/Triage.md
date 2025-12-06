@@ -1,5 +1,7 @@
 ## macOS Triage Acquisition
 
+**Important:** Triage collection should be performed on the target system to gather artifacts, which are then analyzed on a separate analyst workstation. Never perform analysis on a potentially compromised system.
+
 ### Key Items for Triage
 - System and User Logs
   - Unified Logs (`/var/db/diagnostics/`)
@@ -38,14 +40,20 @@
   - Application bundles
   - Package receipts
 
-### Tools
+### Collection Tools
+
+**Note:** These tools collect artifacts from the target system. Transfer collected data to an analyst workstation for parsing and analysis.
 
 - [AutoMacTC](https://github.com/CrowdStrike/automactc) - Automated macOS forensic triage collection
 - [ORION](https://github.com/Johnng007/ORION) - Artifact collection for macOS
-- [mac_apt](https://github.com/ydkhatri/mac_apt) - macOS Artifact Parsing Tool
-- [Velociraptor](https://github.com/Velocidex/velociraptor) - Cross-platform endpoint visibility
-- [osquery](https://osquery.io/) - SQL-based system instrumentation
+- [Velociraptor](https://github.com/Velocidex/velociraptor) - Cross-platform endpoint visibility and collection
+- [osquery](https://osquery.io/) - SQL-based system data collection
 - Build Your Own
+
+**Parsing Tools (for offline analysis on analyst workstation):**
+- [mac_apt](https://github.com/ydkhatri/mac_apt) - Parse collected macOS artifacts
+- [UnifiedLogReader](https://github.com/ydkhatri/UnifiedLogReader) - Parse unified logs
+- [APOLLO](https://github.com/mac4n6/APOLLO) - Parse user activity artifacts
 
 #### AutoMacTC
 AutoMacTC is a modular forensic triage collection framework.
@@ -83,18 +91,18 @@ sudo ./orion --output /path/to/output
 sudo ./orion --quick --output /path/to/output
 ```
 
-#### mac_apt
-macOS Artifact Parsing Tool - extracts and parses artifacts.
+#### mac_apt (Analysis Tool - Use Offline)
+macOS Artifact Parsing Tool - **run on analyst workstation to parse collected artifacts**.
 
 ```bash
-# Parse all artifacts from live system
-sudo python3 mac_apt.py / -o /path/to/output
+# Parse artifacts from collected triage data or disk image (NOT on live compromised system)
+python3 mac_apt.py /path/to/collected/data -o /path/to/output
 
-# Parse specific artifacts
-sudo python3 mac_apt.py / -o /path/to/output -p USERS,SAFARI,BASH
+# Parse specific artifacts from collection
+python3 mac_apt.py /path/to/collected/data -o /path/to/output -p USERS,SAFARI,BASH
 
-# Parse from disk image
-sudo python3 mac_apt.py /Volumes/Evidence -o /path/to/output
+# Parse from forensic disk image
+python3 mac_apt.py /Volumes/Evidence -o /path/to/output
 ```
 
 #### Velociraptor

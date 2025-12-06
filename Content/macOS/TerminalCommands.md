@@ -1,5 +1,7 @@
 ## macOS Terminal Commands
 
+**Purpose:** These commands are primarily for collecting system information and artifacts from target systems during incident response. Detailed analysis should be performed on collected data using an analyst workstation.
+
 ### System Information
 
 - Get System Information: `system_profiler SPSoftwareDataType SPHardwareDataType`
@@ -151,21 +153,22 @@
 - Generate Process Sample: `sample <PID> 10` (samples for 10 seconds)
 - Generate Spin Report: `spindump <PID>`
 
-### Forensic and Incident Response
+### Data Collection for Forensics
 
-- Collect System Diagnostics: `sudo sysdiagnose -f /tmp/` (comprehensive diagnostic bundle)
+- Collect System Diagnostics: `sudo sysdiagnose -f /tmp/` (comprehensive diagnostic bundle for offline analysis)
 - Create Disk Image: `sudo hdiutil create -srcfolder /path/to/folder -format UDZO /path/to/image.dmg`
-- Mount Disk Image: `hdiutil attach /path/to/image.dmg`
 - Calculate Directory Hash: `find /path -type f -exec shasum -a 256 {} \; > hashes.txt`
 - Search Spotlight Database: `mdfind <query>`
-- Rebuild Spotlight Index: `sudo mdutil -E /`
-- Check Code Signing of Running Process: `codesign -dv /proc/<PID>/exe 2>&1`
 - List Network Connections with Processes: `sudo lsof -i -n -P`
-- Monitor File System Changes: `sudo fs_usage -w -f filesys` (real-time)
-- Examine Binary for Indicators: `strings <binary> | grep -i <indicator>`
-- Hexdump Binary: `xxd <binary> | head -n 50`
-- Disassemble Binary: `otool -tV <binary>` (x86/ARM disassembly)
+- Monitor File System Changes: `sudo fs_usage -w -f filesys` (real-time collection)
+- Collect String Data: `strings <binary> > binary_strings.txt` (analyze offline)
+- Hexdump Binary: `xxd <binary> > binary_hex.txt` (analyze offline)
 - List Loaded Dynamic Libraries: `otool -L <binary>`
+
+**Analysis Commands (use on analyst workstation with collected data):**
+- Mount Disk Image: `hdiutil attach /path/to/image.dmg`
+- Check Code Signing: `codesign -dv <binary>`
+- Disassemble Binary: `otool -tV <binary>` (perform on analysis workstation)
 
 ### Helpful Aliases
 

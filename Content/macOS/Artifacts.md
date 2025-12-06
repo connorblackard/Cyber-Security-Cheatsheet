@@ -60,10 +60,14 @@ Many macOS artifacts use SQLite databases. Query using:
 - `.schema <table>` - show table structure
 - `SELECT * FROM <table>;` - query data
 
-### Useful Analysis Tools
-- [mac_apt](https://github.com/ydkhatri/mac_apt) - macOS Artifact Parsing Tool
+### Collection and Analysis Tools
+
+**Collection Tools (run on target system):**
 - [AutoMacTC](https://github.com/CrowdStrike/automactc) - Automated macOS forensic triage collection
 - [KnockKnock](https://objective-see.org/products/knockknock.html) - Persistence enumeration
+
+**Parsing Tools (run on analyst workstation with collected data):**
+- [mac_apt](https://github.com/ydkhatri/mac_apt) - macOS Artifact Parsing Tool
 - [APOLLO](https://github.com/mac4n6/APOLLO) - Apple Pattern of Life Lazy Output'er
 
 For comprehensive artifact locations, review [mac_apt modules](https://github.com/ydkhatri/mac_apt) and [macOS Forensic Artifacts](https://github.com/pstirparo/mac4n6).
